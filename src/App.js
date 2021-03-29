@@ -1,5 +1,11 @@
 import './App.css';
 
+
+//Assets
+
+import user_logo from './assets/user_logo.png'
+import banner from './assets/banner.jpg'
+
 const App = () => {
   return (
 
@@ -122,6 +128,35 @@ const App = () => {
         </article>
 
       </div>
+
+      <article className="Post">
+        <header className="Post-header">
+          <img src={banner} alt="Imagen no dispoible" />
+        </header>
+        <section className="Post-body">
+          <div className="Post-body-item">
+            <h3>Empresa</h3>
+          </div>
+          <div className="Post-body-item">
+            <small>País</small>
+            <p>Colombia</p>
+          </div>
+          <div className="Post-body-item Post-body-item--description">
+            <small>Descripción</small>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non ex nibh. Suspendisse lacinia, urna sed congue suscipit, magna orci volutpat felis, non fringilla ligula nibh gravida enim.</p>
+          </div>
+
+        </section>
+        <footer className="Post-footer">
+          <div >
+            <img src={user_logo} alt="Imagen no dispoible" />
+          </div>
+          <div className="Post-footer-info">
+            <p className="Post-footer-info-user">Jorge</p>
+            <p className="Post-footer-info-date">29 de marzo de 2021</p>
+          </div>
+        </footer>
+      </article>
     </>
   );
 }
