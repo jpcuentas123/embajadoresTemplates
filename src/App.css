@@ -1,7 +1,7 @@
-body{
+body {
   padding: 50px 50px;
 }
-.EntrepreneurshipForm{
+.EntrepreneurshipForm {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -18,7 +18,8 @@ body{
   display: flex;
   flex-direction: column;
 }
-.EntrepreneurshipForm-section input, textarea {
+.EntrepreneurshipForm-section input,
+textarea {
   border: 1px solid #d8d8d8;
   border-radius: 4px;
   /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); */
@@ -26,108 +27,205 @@ body{
   margin-top: 20px;
   width: 400px;
 }
-.lastsection{
+.lastsection {
   flex-direction: column;
 }
 .EntrepreneurshipForm-section input[type="checkbox"] {
   box-shadow: none;
 }
 
-.EntrepreneurshipForm-section.controls button{
-
+.EntrepreneurshipForm-section.controls button {
   border: none;
   color: white;
   padding: 10px 20px;
-  background-color: #18212E;
+  background-color: #18212e;
   cursor: pointer;
   transition: all 0.5s;
 }
 
-.EntrepreneurshipForm-section.controls button:hover{
+.EntrepreneurshipForm-section.controls button:hover {
   background-color: #212e3f;
 }
 
-.EntrepreneurshipPost{
+.EntrepreneurshipPost {
   display: grid;
   grid-template-columns: 0.3fr 1fr;
   padding: 20px;
   column-gap: 50px;
   text-align: center;
-
 }
 
-.EntrepreneurshipPost-aside, .EntrepreneurshipPost-content  {
-  
+.EntrepreneurshipPost-aside,
+.EntrepreneurshipPost-content {
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
   padding: 20px 40px;
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
   border-radius: 2px;
-  
 }
 
-.EntrepreneurshipPost-content-header{
+.EntrepreneurshipPost-content-header {
   padding: 40px 0px;
 }
 
-.EntrepreneurshipPost-content-header h2{
-
+.EntrepreneurshipPost-content-header h2 {
   font-size: 28px;
 }
 
-.EntrepreneurshipPost-content p{
-  padding-bottom: 20px;  
+.EntrepreneurshipPost-content p {
+  padding-bottom: 20px;
 }
-.EntrepreneurshipPost-content{
+.EntrepreneurshipPost-content {
   padding: 20px 150px;
 }
-.EntrepreneurshipPost-aside h4{
+.EntrepreneurshipPost-aside h4 {
   font-size: 20px;
   padding: 20px 0px;
 }
 
-.Post{
+.Post {
   height: auto;
   width: 260px;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+  margin: 0;
 }
-.Post-header{
+.Post-header {
   width: 237px;
   height: 157px;
+  cursor: pointer;
 }
-.Post-header img{
-  width: 260px;
+.Post-header img {
+  min-width: 260px !important;
   height: 157px;
 }
-.Post-body{
-
+.Post-body {
   padding: 20px;
-
 }
-.Post-body-item--description p{
-  height: 40px;
+.Post-body-item--description p {
+  height: 50px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.Post-footer{
-  height: 74px;
+.Post-footer {
+  height: 120px;
   padding: 20px;
   display: grid;
   grid-template-columns: 0.3fr 1fr;
   margin-top: 20px;
 }
-
-.Post-footer img{
+.Post-footer img {
   width: 30px;
   border-radius: 100%;
 }
-.Post-footer-info-user{
-
+.Post-footer-info-user {
   font-weight: 500;
   margin-top: 0px;
-
 }
-.Post-footer-info-date{
+.Post-footer-info-date {
   font-weight: 500;
   color: #747b86;
+}
+.PostContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+.Post-body-item--title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 1em 0px;
+  cursor: pointer;
+}
+.Post-body-item--title h3 {
+  margin: 0px;
+}
+.Post-body-item-status {
+  font-size: 10px;
+
+  background-color: #d69729;
+}
+
+.Post-body-item--controls {
+  display: flex;
+  gap: 5px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.Post-btn {
+  padding: 2px;
+  border-radius: 2px;
+  display: block;
+  margin: 0px;
+  color: white;
+  transition: all 0.5s;
+}
+.Post-btn-edit {
+  background-color: #33567a;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.Post-btn-delete {
+  background-color: #8f0d0d;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.Post-btn-edit:hover {
+  background-color: #3e6b9b;
+}
+
+.Post-btn-delete:hover {
+  background-color: #b11111;
+}
+
+.dashboard-menu {
+  background-color: white;
+  height: 700px;
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 2px;
+  gap: 10px;
+  padding: 0px 10px;
+  width: 200px;
+  border-radius: 2px;
+}
+.dashboard-menu-item button {
+  min-width: 130px;
+  border: none;
+  padding: 5px;
+  color: white;
+  border-radius: 1px;
+  background-color: #9b0c23;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.dashboard-menu-item .active {
+  background-color: #18212e;
+}
+.dashboard-menu-item button:hover{
+  background-color: #18212e;
+}
+.dashboard-menu a {
+  color: white;
+}
+.dashboard-menu-subitem{
+  position: absolute;
+  flex-direction: column;
+  margin-left: 110px;
+  padding-left: 30px;
+  gap: 10px;
+  margin-top: -25px;
+  display: none;
+  z-index: 10;
+}
+.dashboard-menu-subitem:hover{
+  display: flex;
+}
+.dashboard-menu-item--post:hover .dashboard-menu-subitem{
+  display: flex;
 }

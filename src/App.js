@@ -128,35 +128,182 @@ const App = () => {
         </article>
 
       </div>
+      <section className="PostContainer">
+        <article className="Post">
+          <a>
+            <header className="Post-header">
+              <img src={banner} alt="Imagen no dispoible" />
+            </header>
+            <section className="Post-body">
+              <div className="Post-body-item Post-body-item--title">
+                <h3>Empresa</h3> <span className="Post-body-item-status Post-btn">En revisión</span>
+              </div>
+              <div className="Post-body-item Post-body-item--controls">
+                <p className="Post-btn Post-btn-edit">Editar</p>
+                <p className="Post-btn Post-btn-delete">Borrar</p>
+              </div>
+              <div className="Post-body-item">
+                <small>Tipo</small>
+                <p>Emprendimiento</p>
+              </div>
+              <div className="Post-body-item">
+                <small>País</small>
+                <p>Colombia</p>
+              </div>
+              <div className="Post-body-item Post-body-item--description">
+                <small>Descripción</small>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non ex nibh. Suspendisse lacinia, urna sed congue suscipit, magna orci volutpat felis, non fringilla ligula nibh gravida enim.</p>
+              </div>
 
-      <article className="Post">
-        <header className="Post-header">
-          <img src={banner} alt="Imagen no dispoible" />
-        </header>
-        <section className="Post-body">
-          <div className="Post-body-item">
-            <h3>Empresa</h3>
-          </div>
-          <div className="Post-body-item">
-            <small>País</small>
-            <p>Colombia</p>
-          </div>
-          <div className="Post-body-item Post-body-item--description">
-            <small>Descripción</small>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non ex nibh. Suspendisse lacinia, urna sed congue suscipit, magna orci volutpat felis, non fringilla ligula nibh gravida enim.</p>
-          </div>
+            </section>
+            <footer className="Post-footer">
+              <div >
+                <img src={user_logo} alt="Imagen no dispoible" />
+              </div>
+              <div className="Post-footer-info">
+                <p className="Post-footer-info-user">Jorge</p>
+                <p className="Post-footer-info-date">29 de marzo de 2021</p>
+              </div>
+            </footer>
+          </a>
+        </article>
+        <article className="Post">
+          <a>
+            <header className="Post-header">
+              <img src={banner} alt="Imagen no dispoible" />
+            </header>
+            <section className="Post-body">
+              <div className="Post-body-item">
+                <h3>Empresa</h3>
+              </div>
+              <div className="Post-body-item">
+                <small>País</small>
+                <p>Colombia</p>
+              </div>
+              <div className="Post-body-item Post-body-item--description">
+                <small>Descripción</small>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non ex nibh. Suspendisse lacinia, urna sed congue suscipit, magna orci volutpat felis, non fringilla ligula nibh gravida enim.</p>
+              </div>
 
-        </section>
-        <footer className="Post-footer">
-          <div >
-            <img src={user_logo} alt="Imagen no dispoible" />
+            </section>
+            <footer className="Post-footer">
+              <div >
+                <img src={user_logo} alt="Imagen no dispoible" />
+              </div>
+              <div className="Post-footer-info">
+                <p className="Post-footer-info-user">Jorge</p>
+                <p className="Post-footer-info-date">29 de marzo de 2021</p>
+              </div>
+            </footer>
+          </a>
+        </article>
+      </section>
+      <div className="dashboard-menu">
+
+        <div className="dashboard-menu-item">
+          <button>
+            <a href="/emnuy//mi-perfil">
+              Mi perfil
+                </a>
+          </button>
+        </div>
+        <div className="dashboard-menu-item dashboard-menu-item--post">
+          <button className="">
+            <a href="/emnuy/publicar/">
+              Publicar
+            </a>
+          </button>
+          <div className="dashboard-menu-item dashboard-menu-subitem">
+            <button className="">
+              <a href="/emnuy/publicar/">
+                Oferta laboral
+            </a>
+            </button>
+            <button className="">
+              <a href="/emnuy/publicar/">
+                Emprendimiento
+            </a>
+            </button>
           </div>
-          <div className="Post-footer-info">
-            <p className="Post-footer-info-user">Jorge</p>
-            <p className="Post-footer-info-date">29 de marzo de 2021</p>
-          </div>
-        </footer>
-      </article>
+        </div>
+        <div className="dashboard-menu-item">
+          <button className="active">
+            Publicaciones
+            </button>
+        </div>
+        <div className="dashboard-menu-item">
+          <button>Cerrar sesión</button>
+        </div>
+
+      </div>
+      <form class="EntrepreneurshipForm" action="http://localhost/emnuy/publicando-emprendimiento/" method="POST" enctype="multipart/form-data">
+      <header>
+        <h3>Publicar oferta laboral</h3>
+      </header>
+      <section class="EntrepreneurshipForm-section">
+
+        <div>
+          <label for="">Nombre de la oferta</label>
+          <input value="" placeholder="" required id="offer_name" name="offer_name"
+            autocomplete="given-name" />
+        </div>
+
+        <div>
+          <label for="">Correo electrónico</label>
+          <input value="" placeholder="" required id="offer_email" name="offer_email"
+            autocomplete="email" />
+        </div>
+
+      </section>
+
+      <section class="EntrepreneurshipForm-section">
+
+        <div>
+          <label for="">Teléfono de contacto</label>
+          <input value="" placeholder="" required id="offer_tel" name="offer_tel" autocomplete="tel" />
+        </div>
+
+        <div>
+          <label for="">País</label>
+          <input value="" placeholder="" required id="offer_country" name="offer_country"
+            autocomplete="country" />
+        </div>
+
+      </section>
+
+      <section class="EntrepreneurshipForm-section">
+
+        <div>
+          <label for="">Cargo requerido</label>
+          <input value="" placeholder="" required id="offer_job" name="offer_job"
+            autocomplete="job" />
+        </div>
+        <div>
+          <label for="">Descripción</label>
+          <textarea id="offer_info" name="offer_info">
+          </textarea>
+        </div>
+
+      </section>
+
+      <section class="EntrepreneurshipForm-section lastsection">
+
+        <div>
+          <label for="">¿Quieres adjuntar tu logo?</label>
+          <input value="" type="file" placeholder="" id="offer_logo" name="offer_logo" />
+        </div>
+        <div class="">
+          <label for="">¿Autorizas que compartamos tu información en esta red para que los miembros de la comunidad
+          conozcan sobre tu emprendimiento?
+                <input type="checkbox" placeholder="Si" required id="offer" name="offer" />
+          </label>
+        </div>
+
+      </section>
+      <section class="EntrepreneurshipForm-section controls">
+        <button>Publicar</button>
+      </section>
+    </form>
     </>
   );
 }
